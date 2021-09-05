@@ -45,16 +45,32 @@
 
 
 
-function every(arr, fn) {
-    if(!Array.isArray(arr)) return new Error("Ошибка не массив");
-    if(!fn || typeof fn !== 'function') return new Error("Ошибка не функция");
-    for(let i = 0; i < arr.length; i++){
-        if (!fn(arr[i], i, arr)) {
-            return false;
-        }
-    }
-    return true;
-}
-console.log(every([1, 2], function(el){
-    return typeof el === 'number';
-}));
+// function every(arr, fn) {
+//     if(!Array.isArray(arr)) return new Error("Ошибка не массив");
+//     if(!fn || typeof fn !== 'function') return new Error("Ошибка не функция");
+//     for(let i = 0; i < arr.length; i++){
+//         if (!fn(arr[i], i, arr)) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// console.log(every([1, 2], function(el){
+//     return typeof el === 'number';
+// }));
+
+/*THIS*/
+
+// function getThis(){     //This равен предыдущему объекту в контексте - Window
+//     console.log(this);
+// }
+// getThis();
+
+// const getTh = {             //This в контексте вызова равен самому объекту
+//     model: 'intel',
+//     price: 100,
+//     getInfo: function (){
+//         console.log(this)
+//     }
+// }
+// getTh.getInfo();
